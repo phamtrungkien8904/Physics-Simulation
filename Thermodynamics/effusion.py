@@ -157,5 +157,5 @@ def animate(i):
 # Number of frames; set to None to run until explicitly quit.
 nframes = 100*FPS
 anim = FuncAnimation(fig, animate, frames=nframes, interval=10)
-# anim.save('animation.mp4')
+# anim.save('effusion.mp4')
 plt.show()
