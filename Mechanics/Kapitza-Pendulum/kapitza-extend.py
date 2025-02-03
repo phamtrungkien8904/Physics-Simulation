@@ -11,11 +11,11 @@ FRAMES_DIR = Path('frames')
 m = 1        # mass of each bob (kg)
 L = 1        # length of each rod (m)
 a = 0.2      # amplitude of the pivot oscillation (m)
-w = 40      # angular frequency of the pivot (rad/s)
+w = 200      # angular frequency of the pivot (rad/s)
 g = 9.81     # gravitational acceleration (m/s^2)
 
 # Number of pendulum bobs.
-N = 1   # Try N = 1 for the given case; for N>1 you get a multi–bob pendulum.
+N = 10   # Try N = 1 for the given case; for N>1 you get a multi–bob pendulum.
 
 def deriv(t, y, L, a, w, g, N):
     """
