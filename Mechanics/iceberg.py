@@ -282,4 +282,5 @@ def update(it):
     ax.axis('equal')
 
 ani = animation.FuncAnimation(fig, update, 150, blit=False, interval=100, repeat=True)
+# ani.save('iceberg.mp4', writer='ffmpeg', fps=30)
 plt.show()
