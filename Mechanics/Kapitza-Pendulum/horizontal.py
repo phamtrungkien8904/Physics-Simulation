@@ -8,8 +8,8 @@ FRAMES_DIR = Path('frames')
 
 # Parameters
 m, L = 1, 1
-a = 0.2
-w = 100
+a = 0.1
+w = 80
 g = 9.81
 
 def deriv(t, y, L, a, w):
@@ -28,7 +28,7 @@ def deriv(t, y, L, a, w):
 
 if __name__ == "__main__":
     # Time parameters.
-    tmax, dt = 3, 1/w/20
+    tmax, dt = 5, 1/w/20
     t = np.arange(0, tmax, dt)
     y0 = [0.1, 0]  # initial conditions: small angle near the inverted position.
     
@@ -83,7 +83,7 @@ if __name__ == "__main__":
         marker.set_data(t[i], theta[i])
         return [marker]
     
-    ani = animation.FuncAnimation(fig, update, frames=len(t), interval=3, blit=False)
-    #ani.save('kapitza_horizontal.mp4', writer='ffmpeg', fps=30)
+    ani = animation.FuncAnimation(fig, update, frames=len(t), interval=5, blit=False)
+    ani.save('kapitza_horizontal.mp4', writer='ffmpeg', fps=30)
     plt.tight_layout()
     plt.show()
