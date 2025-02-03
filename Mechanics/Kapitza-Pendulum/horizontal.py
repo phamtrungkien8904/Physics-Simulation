@@ -84,6 +84,6 @@ if __name__ == "__main__":
         return [marker]
     
     ani = animation.FuncAnimation(fig, update, frames=len(t), interval=5, blit=False)
-    ani.save('kapitza_horizontal.mp4', writer='ffmpeg', fps=30)
+    #ani.save('kapitza_horizontal.mp4', writer='ffmpeg', fps=30)
     plt.tight_layout()
     plt.show()

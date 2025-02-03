@@ -11,7 +11,7 @@ FRAMES_DIR = Path('frames')
 m = 1        # mass of each bob (kg)
 L = 1        # length of each rod (m)
 a = 0.2      # amplitude of the pivot oscillation (m)
-w = 100       # angular frequency of the pivot (rad/s)
+w = 40      # angular frequency of the pivot (rad/s)
 g = 9.81     # gravitational acceleration (m/s^2)
 
 # Number of pendulum bobs.
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     lines = []
     for i in range(N):
         ln, = ax2.plot(t, theta_sol[i, :], '-', color=colors[i],
-                       label=rf'$\theta_{i+1}(t)$')
+                       label=rf'$\theta_{i+1} (t)$')
         lines.append(ln)
     ax2.set_xlabel("Time (s)")
     ax2.set_ylabel("Angle (rad)")
@@ -141,7 +141,7 @@ if __name__ == "__main__":
         marker.set_data(t[i], theta_sol[0, i])
         return [marker]
     
-    ani = animation.FuncAnimation(fig, update, frames=len(t), interval=3, blit=False)
+    ani = animation.FuncAnimation(fig, update, frames=len(t), interval=5, blit=False)
     # If you wish to save the animation, you can uncomment the next line.
     #ani.save('kapitza_Nbobs.mp4', writer='ffmpeg', fps=30)
     plt.tight_layout()
