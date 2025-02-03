@@ -7,8 +7,8 @@ from matplotlib import animation
 FRAMES_DIR = Path('frames')
 
 m, L = 1, 1
-a = 0.1
-w = 80
+a = 0.2
+w = 100
 g = 9.81
 
 def deriv(t, y, L, a, w):
